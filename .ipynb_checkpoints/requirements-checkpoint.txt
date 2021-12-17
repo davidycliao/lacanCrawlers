@@ -3,4 +3,4 @@ pandas
 matplotlib
 selenium
 webdriver-manager==3.4.2
-datefinder
+

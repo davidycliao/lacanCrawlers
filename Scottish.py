@@ -5,7 +5,7 @@
 @author: davidycliao
 @email : davidycliao@gmail.com
 @date  : 9-Dec-2021
-@info  : 
+@info  : LACAN Project (Legislators between Accountability and Collective Agency)
 """
 
 
@@ -38,7 +38,7 @@ def toString(s):
     string = " " 
     return string.join(s)
 
-def scotish_scraper(session = 'Current Session'):
+def scottish_scraper(session = 'Current Session'):
     '''
     This scraper will extract parliarmentary questions from answered questions and holding answers.
     Time periods includes:
@@ -93,7 +93,7 @@ def scotish_scraper(session = 'Current Session'):
                     page_text=element.text
                     len_num=int(len(re.findall(r'\b\d+\b', page_text)))
                 
-                # deal with the page which has 4 page tag
+                # deal with the page that has 4 links
                 if len_num==3:
                     containers = driver.find_elements(By.XPATH, '//div[@class="content-list__block"]')
                     for i in range(0, len(containers)):
@@ -138,7 +138,7 @@ def scotish_scraper(session = 'Current Session'):
                     f.write('\n')
                     driver.find_element(By.XPATH, '//*[@id="main"]/div[4]/div/div[2]/div/div[2]/div/a[4]').click()
                     
-                # deal with the page which has 5 page tag
+                # deal with the page that has 5 links
                 elif len_num==4:
                     containers=driver.find_elements(By.XPATH, '//div[@class="content-list__block"]')
                     
@@ -185,7 +185,7 @@ def scotish_scraper(session = 'Current Session'):
                     f.write('\n')
                     driver.find_element(By.XPATH, '//*[@id="main"]/div[4]/div/div[2]/div/div[2]/div/a[5]').click()
                     
-                # deal with the page which has 6 page tag
+                # deal with the page that has 6 links
                 elif len_num==5:
                     containers=driver.find_elements(By.XPATH, '//div[@class="content-list__block"]')
                     
@@ -230,7 +230,7 @@ def scotish_scraper(session = 'Current Session'):
                     f.write('\n')
                     driver.find_element(By.XPATH, '//*[@id="main"]/div[4]/div/div[2]/div/div[2]/div/a[6]').click()  
                 
-                # deal with the page which reaches the end of the webpage
+                # deal with the page that reaches the end of the webpage
                 elif current_page==final_page:
                     containers=driver.find_elements(By.XPATH, '//div[@class="content-list__block"]')
                     for i in range(0, len(containers)):
@@ -287,12 +287,12 @@ def scotish_scraper(session = 'Current Session'):
                            'Answered Content':answered_content,
                            'Web No.': web_number,
                            'Total Number of Pages': total_webpage})
-        df.to_csv('Scotish_QP_' + session + '.csv', index=False)
+        df.to_csv('Scottish_QP_' + session + '.csv', index=False)
         pass
         driver.close()
         driver.quit()
         
-    # to capture the error caused by the keyboard interrupt 
+    # capture the error caused by the keyboard interruption 
     except (KeyboardInterrupt) as e:
         print('Webpage from ' + current_page, 'is failed... \n' , e + ' : due to manual interruption')
         df = pd.DataFrame({'Question Ref.': question_ref,
@@ -310,7 +310,7 @@ def scotish_scraper(session = 'Current Session'):
         driver.close()
         driver.quit()
         
-    # to capture the error caused by unforeseen structures of the website
+    # capture the error caused by unforeseen structures of the website
     except (exceptions.StaleElementReferenceException) as e:
         print('Webpage from ' + current_page, 'is failed... \n' , e + ' : due to the elements can not be found due to unforeseen structures from the website', e)
         df = pd.DataFrame({'Question Ref.': question_ref,
@@ -323,12 +323,12 @@ def scotish_scraper(session = 'Current Session'):
                            'Answered Content':answered_content,
                            'Web No.': web_number,
                            'Total Number of Pages': total_webpage})
-        df.to_csv('Scotish_QP_' + session + '.csv', index=False)
+        df.to_csv('Scottish_QP_' + session + '.csv', index=False)
         pass
         driver.close()
         driver.quit()
         
-    # to capture the error caused by new structure or layouts change such as 4 rows reduced to 3 or 2 rows
+    # capture the error caused by new structure or layouts change such as 4 rows reduced to 3 or 2 rows
     except (AttributeError, IndexError) as e:
         print('Webpage from ' + current_page, 'is failed... \n' , e + ' :due to new structure or layouts change')
         df = pd.DataFrame({'Question Ref.': question_ref,
@@ -341,7 +341,7 @@ def scotish_scraper(session = 'Current Session'):
                            'Answered Content':answered_content,
                            'Web No.': web_number,
                            'Total Number of Pages': total_webpage})
-        df.to_csv('Scotish_QP_' + session + '.csv', index=False)
+        df.to_csv('Scottish_QP_' + session + '.csv', index=False)
         pass
         driver.close()
         driver.quit()
