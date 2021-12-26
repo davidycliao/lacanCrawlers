@@ -25,9 +25,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 
 def cleanhtml(raw_html):
-  cleanr = re.compile('<.*?>')
-  cleantext = re.sub(cleanr, '', raw_html)
-  return cleantext
+    cleanr = re.compile('<.*?>')
+    cleantext = re.sub(cleanr, '', raw_html)
+    return cleantext
 
 
 def toString(s): 
