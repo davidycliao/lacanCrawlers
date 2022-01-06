@@ -1,10 +1,10 @@
 
-## Environment Setup
-
 <p align="center">
     <img src="flowchart.png"  style="width:570px;"/>
 </p>
 
+
+## Environment Setup
 
 1. Need to install [Anaconda Navigator](https://www.anaconda.com/products/individual-b) and [Python>=3.9](https://www.python.org/downloads/release/python-3810/) beforehand. And then, open the terminal and download `bisCrawler` repository by using `git clone`. About how to use git and Github, please have a look at this [Tutorial for Beginners](https://www.youtube.com/watch?v=RvnM6EEwp1I). 
 
