@@ -15,16 +15,16 @@ git clone  git@github.com:davidycliao/scottish.git
 2. Copy the commands below and paste them into the terminal:
 
 ```
-# Change the directory by typing `cd` command once `scottish` repository is downloaded.
+# Change the directory by typing `cd` command once `bamberg.lacan` repository is downloaded.
 cd scotish
 
-# Create the enviroment by using conda and name the enviroment `Scottish`.
+# Create the enviroment by using conda and name the enviroment `bamberg.lacan`.
 conda create -n scottish python=3.9
 ```
 
 ## Instruction
 
-1. Activate the pre-named enviroment. Alternatively, the environment for `scotish` can be opened via [Anaconda Navigator](https://www.anaconda.com/products/individual-b)
+1. Activate the pre-named enviroment. Alternatively, the environment for `bamberg.lacan` can be opened via [Anaconda Navigator](https://www.anaconda.com/products/individual-b)
 
 ```
 conda activate Scottish 
@@ -34,19 +34,6 @@ conda activate Scottish
 
 ```
 pip install -r requirements.txt   
-```
-
-3. Call `Scottish` Moduel in Jupyter Notebook: 
-
-Time periods for selectionsw include: `Session 1`, `Session 2`, `Session 3`, `Session 4`, `Session 5`, `Current Session` and `All Sessions`.
-
-
-```
-from Scottish import scottish_scraper 
-```
-
-```
-scottish_scraper(session='Session 1')
 ```
 
 
