@@ -16,7 +16,7 @@ bamberg.lacan/
 
 ## Environment Setup
 
-### Step 1: Download the LACAN module 
+### Step 1: Download the LACAN N=Module 
 
 - Before downloading the module, the installation of  [Anaconda Navigator](https://www.anaconda.com/products/individual-b) and [Python>=3.9](https://www.python.org/downloads/release/python-3810/) are required beforehand. The module is hosted on my Github private repository [`davidycliao/bamberg.lacan`](https://github.com/davidycliao/bamberg.lacan). Please email me to have you accessed as maintainer. Once having access to the repo, you can open the terminal and download `bamberg.lacan` repository by using `git clone`. 
 
