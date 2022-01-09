@@ -1,7 +1,7 @@
 
 ## lacanCrawler: An Automation Webcrawler for Extracting Text Data from Parliarmnets
 
-An automation web crawling framework for retrieving for parliarmentay questions from Parliaments in United Kingdom based on Selenium and Chrome browser.
+An automation web crawling framework for retrieving for parliarmentay questions from the three parliaments from United Kingdom and National Diet of Japan based on Selenium and Chrome browser.
 
 ## Structure of the Module (lacanCrawler)
 
@@ -10,8 +10,8 @@ bamberg.lacan/
     └── LACAN/           ┌─ House of the Commons
         ├── england.py╶──└─ House of the Lord
         ├── scotlan.py
-        └── nirland.py
-
+        ├── nirland.py
+        └── japan.py  
 ```
 
 ## Environment Setup
