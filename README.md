@@ -5,12 +5,14 @@ An automation web crawling framework for retrieving for parliarmentay questions 
 
 ## Structure of the Module
 
+```
 bamberg.lacan/
     └── LACAN/           ┌─ House of the Commons
         ├── england.py╶──└─ House of the Lord
         ├── scotlan.py
         └── nirland.py
 
+```
 
 ## Environment Setup
 
