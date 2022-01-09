@@ -32,7 +32,7 @@ git clone  git@github.com:davidycliao/lacanCrawlers.git
 Change the directory by typing `cd` command once `lacanCrawlers` repository is downloaded.
 
 ```
-cdlacanCrawlers
+cd lacanCrawlers
 ```
 
 - Create the enviroment by using conda and name the enviroment `lacanCrawlers`.
