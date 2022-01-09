@@ -1,12 +1,20 @@
 
-# Environment Setup
+## lacanCrawler: An Automation Webcrawler for Extracting Text Data from Parliarmnets
+
+An automation web crawling framework for retrieving for parliarmentay questions from parliarmnets based on Selenium and Chrome browser.
+
+## Structure of the Module
+
+bamberg.lacan/
+    └── LACAN/           ┌─ House of the Commons
+        ├── england.py╶──└─ House of the Lord
+        ├── scotlan.py
+        └── nirland.py
 
 
+## Environment Setup
 
-
-
-
-### Download the LACAN module 
+### Step 1: Download the LACAN module 
 
 - Before downloading the module, the installation of  [Anaconda Navigator](https://www.anaconda.com/products/individual-b) and [Python>=3.9](https://www.python.org/downloads/release/python-3810/) are required beforehand. The module is hosted on my Github private repository [`davidycliao/bamberg.lacan`](https://github.com/davidycliao/bamberg.lacan). Please email me to have you accessed as maintainer. Once having access to the repo, you can open the terminal and download `bamberg.lacan` repository by using `git clone`. 
 
@@ -30,7 +38,7 @@ cd bamberg.lacan
 conda create -n lacan python=3.9
 ```
 
-### Instruction for the Installation of the Required Dependencies
+### Step 2: Instruction for the Installation of the Required Dependencies
 
 - Activate the pre-named enviroment. Alternatively, the environment for `bamberg.lacan` can be opened via [Anaconda Navigator](https://www.anaconda.com/products/individual-b)
 
