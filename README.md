@@ -1,9 +1,10 @@
 
-## lacanCrawler: An Automation Webcrawler for Extracting Text Data from Parliarmnets
+# lacanCrawler: An Automation Webcrawler for Extracting Parliarmnetary Data
+
 
 An automation web crawling framework for retrieving for parliarmentay questions and textual statements from the three parliaments from United Kingdom and National Diet of Japan based on Selenium and Chrome browser.
 
-## Structure of the Module (lacanCrawler)
+## The Structure of the Module (lacanCrawlers)
 
 ```
 bamberg.lacan/
@@ -23,29 +24,29 @@ bamberg.lacan/
 About how to use git and Github, please have a look at this [Tutorial for Beginners](https://www.youtube.com/watch?v=RvnM6EEwp1I). 
 
 ```
-git clone  git@github.com:davidycliao/lacanCrawler.git
+git clone  git@github.com:davidycliao/lacanCrawlers.git
 ```
 
 - Copy the commands below and paste them into the terminal:
 
-Change the directory by typing `cd` command once `lacanCrawler` repository is downloaded.
+Change the directory by typing `cd` command once `lacanCrawlers` repository is downloaded.
 
 ```
-cd bamberg.lacan
+cdlacanCrawlers
 ```
 
-- Create the enviroment by using conda and name the enviroment `lacanCrawler`.
+- Create the enviroment by using conda and name the enviroment `lacanCrawlers`.
 
 ```
-conda create -n lacan python=3.9
+conda create -n lacanCrawlers python=3.9
 ```
 
 ### Step 2: Instruction for the Installation of the Required Dependencies
 
-- Activate the pre-named enviroment. Alternatively, the environment for `lacanCrawler` can be opened via [Anaconda Navigator](https://www.anaconda.com/products/individual-b)
+- Activate the pre-named enviroment. Alternatively, the environment for `lacanCrawlers` can be opened via [Anaconda Navigator](https://www.anaconda.com/products/individual-b)
 
 ```
-conda activate lacanCrawler 
+conda activate lacanCrawlers 
 ```
 
 - Install required modules from `requirements.txt` using `pip` methond.
