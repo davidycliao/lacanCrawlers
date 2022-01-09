@@ -1,7 +1,7 @@
 
 ## lacanCrawler: An Automation Webcrawler for Extracting Text Data from Parliarmnets
 
-An automation web crawling framework for retrieving for parliarmentay questions from parliarmnets based on Selenium and Chrome browser.
+An automation web crawling framework for retrieving for parliarmentay questions from Parliaments in United Kingdom based on Selenium and Chrome browser.
 
 ## Structure of the Module (lacanCrawler)
 
