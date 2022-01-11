@@ -31,7 +31,7 @@ def parliamentary_questions(legislature = 'test'):
 
     '''
     if legislature == 'Commons':
-        links = 'https://questions-statements.parliament.uk/written-questions?Answered=Any&AnsweredFrom=01%2F01%2F1820&AnsweredTo=31%2F07%2F2022&DateFrom=01%2F01%2F1820&DateTo=31%2F07%2F2022&Expanded=True&House=Commons&SearchTerm=&Page=1'
+        links = 'https://questions-statements.parliament.uk/written-questions?Answered=Any&AnsweredFrom=&AnsweredTo=&DateFrom=01%2F01%2F1999&DateTo=31%2F07%2F2022&Expanded=True&House=Commons&SearchTerm=&Page=1'
         tag = 'The House of Commons'
         name_tag = 'house_of_commons'
         print('Scraping written questions from ' + tag)
@@ -42,7 +42,7 @@ def parliamentary_questions(legislature = 'test'):
         print('Scraping written questions from ' + tag)
     elif legislature == 'Commons-Page':
         page = str(input("Start Page (default, 1):"))
-        links = 'https://questions-statements.parliament.uk/written-questions?Answered=Any&AnsweredFrom=01%2F01%2F1820&AnsweredTo=31%2F07%2F2022&DateFrom=01%2F01%2F1820&DateTo=31%2F07%2F2022&Expanded=True&House=Commons&SearchTerm=&Page=' + page
+        links = 'https://questions-statements.parliament.uk/written-questions?Answered=Any&AnsweredFrom=&AnsweredTo=&DateFrom=01%2F01%2F1999&DateTo=31%2F07%2F2022&Expanded=True&House=Commons&SearchTerm=&Page=' + page
         tag = 'The House of Commons'
         name_tag = 'house_of_commons_page_' + page
         print('Scraping written questions from '+ tag)
@@ -129,6 +129,10 @@ def parliamentary_questions(legislature = 'test'):
                     elif container[i].find_elements(By.XPATH, '//div[@class="info info-secondary answer-info"]')[i].text.split(' ')[0] == 'Awaiting':
                         answeredBy = 'None' 
                         dateAnswered = container[1].find_elements(By.XPATH, '//div[@class="info info-secondary answer-info"]')[i].text 
+                    elif container[i].find_elements(By.XPATH, '//div[@class="info info-secondary answer-info"]')[i].text.split(' ')[0] == '':
+                        answeredBy = 'None' 
+                        dateAnswered = container[1].find_elements(By.XPATH, '//div[@class="info info-secondary answer-info"]')[i].text 
+
 
                     question_ref.append(questionRef)
                     question_for.append(questionFor)
@@ -163,10 +167,10 @@ def parliamentary_questions(legislature = 'test'):
                            'answered_by': answered_by,
                            'web_number': web_number,
                            'total_webpage': total_webpage})  
-        df.to_csv(legislature + '.csv', index=False)
+        df.to_csv(name_tag + '.csv', index=False)
         print('==========================================================================')
         print(tag + 'of written questions is finished')
-        return df
+        # return df
         pass
         driver.close()
         driver.quit()
@@ -187,7 +191,7 @@ def parliamentary_questions(legislature = 'test'):
                            'answered_by': answered_by,
                            'web_number': web_number,
                            'total_webpage': total_webpage})         
-        df.to_csv(legislature + '.csv', index=False)
+        df.to_csv(name_tag + '.csv', index=False)
         pass
         driver.close()
         driver.quit()
@@ -208,7 +212,7 @@ def parliamentary_questions(legislature = 'test'):
                            'web_number': web_number,
                            'total_webpage': total_webpage}) 
         print('Webpage from ',current_page, legislature, 'is failed... \n' , e + ' : due to unforeseen structures of the website.')
-        df.to_csv(legislature + '.csv', index=False)
+        df.to_csv(name_tag + '.csv', index=False)
         pass
         driver.close()
         driver.quit()
@@ -229,7 +233,7 @@ def parliamentary_questions(legislature = 'test'):
                            'web_number': web_number,
                            'total_webpage': total_webpage}) 
         print('Webpage from', tag ,current_page, legislature, 'is failed... \n' , e + ' :due to new structure or layouts change')
-        df.to_csv(legislature + '.csv', index=False)
+        df.to_csv(name_tag + '.csv', index=False)
         pass
         driver.close()
         driver.quit()
