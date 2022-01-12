@@ -1,8 +1,12 @@
 
-# lacanCrawler: An Automation Webcrawler for Extracting Parliament Data
+# lacanCrawler: An Automation Webcrawler for Extracting Parliament Data (Private)
+
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
 
 An automation web crawling framework for scraping parliarmentay data from the three parliaments from United Kingdom and National Diet of Japan based on Selenium.
+
+######  the repository is only visible to LACAN research team.
 
 
 ## The Structure of `lacanCrawlers`
