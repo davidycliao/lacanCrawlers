@@ -1,10 +1,11 @@
 
-# lacanCrawler: An Automation Webcrawler for Extracting Parliarmnetary Data
+# lacanCrawler: An Automation Webcrawler for Extracting Parliament Data
 
 
-An automation web crawling framework for retrieving for parliarmentay questions and textual statements from the three parliaments from United Kingdom and National Diet of Japan based on Selenium and Chrome browser.
+An automation web crawling framework for scraping parliarmentay data from the three parliaments from United Kingdom and National Diet of Japan based on Selenium.
 
-## The Structure of the Module (lacanCrawlers)
+
+## The Structure of `lacanCrawlers`
 
 ```
 bamberg.lacan/
@@ -48,9 +49,18 @@ pip install -r requirements.txt
 
 ## USAGE
 
-### The England 
-#### The House of Commons
+### UK Parliament
+
+The UK Parliament has two Houses, the House of Commons and the House of Lord. 
 
 ```
 from LACAN import england as en
-``
+```
+
+### The Scottish Parliament
+
+```
+from LACAN import scotland as sc
+```
+
+
