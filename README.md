@@ -4,9 +4,9 @@
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 
 
-An automation web crawling framework for scraping parliarmentay data from the three parliaments from United Kingdom and National Diet of Japan based on Selenium.
+An automation web crawling framework for scraping parliamentary data from United Kingdom and National Diet of Japan based on Selenium.
 
-######  the repository is only visible to LACAN research team.
+###### the repository is only visible to LACAN research team.
 
 
 ## The Structure of `lacanCrawlers`
@@ -40,7 +40,6 @@ conda create -n lacanCrawlers python=3.9
 
 conda activate lacanCrawlers 
 ```
-
 
 
 ### Step 2: Instruction for the Installation of the Required Dependencies
